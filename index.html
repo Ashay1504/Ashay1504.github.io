@@ -260,92 +260,124 @@
                     </p>
                 </div>
 
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-16">
-                    <div class="space-y-6">
-                        <div class="rounded-xl overflow-hidden shadow-lg border border-gray-200 bg-white p-2">
-                             <p class="text-xs text-gray-500 font-semibold mb-1 text-center">Final Circuit Build</p>
-                            <img src="IMG-20251119-WA0004.jpg" alt="Arduino Breadboard Setup" class="w-full h-auto object-cover rounded-lg">
+                <div class="flex flex-col gap-8 mb-12">
+                    <div class="w-full bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
+                        <div class="p-3 border-b border-gray-100 flex justify-between items-center bg-gray-50">
+                            <span class="font-semibold text-gray-700">Final Circuit Assembly</span>
+                            <span class="text-xs text-gray-500">Image: IMG-20251119-WA0004.jpg</span>
                         </div>
-                        
-                        <div class="grid grid-cols-2 gap-4">
-                            <div class="rounded-lg overflow-hidden shadow border border-gray-200 bg-white p-1">
-                                <p class="text-xs text-gray-500 font-semibold mb-1 text-center">Serial Monitor</p>
-                                <img src="IMG-20251119-WA0005.jpg" alt="Serial Monitor Output" class="w-full h-full object-cover rounded">
-                            </div>
-                            <div class="rounded-lg overflow-hidden shadow border border-gray-200 bg-black relative">
-                                <video controls class="w-full h-full object-cover">
-                                    <source src="final_video.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                            </div>
-                        </div>
-                        <p class="text-sm text-gray-500 italic text-center mt-2">Watch the video to see the sensor logic in real-time.</p>
+                        <img src="IMG-20251119-WA0004.jpg" alt="Final Circuit Build" class="w-full h-[500px] object-cover">
                     </div>
 
-                    <div class="space-y-8">
+                    <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
+                        <div class="lg:col-span-3 bg-black rounded-xl shadow-lg overflow-hidden h-[400px] border border-gray-200">
+                            <video controls class="w-full h-full object-contain">
+                                <source src="final_video.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="lg:col-span-2 bg-white rounded-xl shadow-lg overflow-hidden h-[400px] border border-gray-200 flex flex-col">
+                             <div class="p-2 border-b border-gray-100 bg-gray-50 text-center">
+                                <span class="font-semibold text-gray-700 text-sm">Serial Output Data</span>
+                            </div>
+                            <img src="IMG-20251119-WA0005.jpg" alt="Serial Monitor Output" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                    
+                    <div class="lg:col-span-1 space-y-8">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-4 border-l-4 border-blue-500 pl-3">Project Overview</h3>
+                            <p class="text-gray-700 text-sm leading-relaxed">
+                                I designed a handheld device to measure distance using an ultrasonic sensor. It uses LED feedback (Green/Yellow/Red) to indicate proximity zones. This system mimics backup sensors found in modern vehicles.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-4 border-l-4 border-blue-500 pl-3">Components</h3>
+                            <div class="space-y-4">
+                                <div class="flex items-center gap-3 bg-white p-3 rounded-lg shadow-sm border border-gray-100">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Arduino_Uno_SMD.jpg/320px-Arduino_Uno_SMD.jpg" 
+
+[Image of Arduino Uno]
+ alt="Arduino Uno" class="w-12 h-12 object-contain">
+                                    <div>
+                                        <p class="font-bold text-sm text-gray-800">Arduino Uno</p>
+                                        <p class="text-xs text-gray-500">Microcontroller</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-3 bg-white p-3 rounded-lg shadow-sm border border-gray-100">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/HC-SR04_Ultrasonic_Sensor.jpg/320px-HC-SR04_Ultrasonic_Sensor.jpg" 
+
+[Image of ultrasonic sensor]
+ alt="HC-SR04" class="w-12 h-12 object-contain">
+                                    <div>
+                                        <p class="font-bold text-sm text-gray-800">HC-SR04</p>
+                                        <p class="text-xs text-gray-500">Ultrasonic Sensor</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-3 bg-white p-3 rounded-lg shadow-sm border border-gray-100">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/37/HC-05.jpg"  alt="HC-05 Module" class="w-12 h-12 object-contain">
+                                    <div>
+                                        <p class="font-bold text-sm text-gray-800">HC-05 Module</p>
+                                        <p class="text-xs text-gray-500">Bluetooth Comm</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-2 space-y-8">
                         
                         <div>
-                            <h3 class="text-2xl font-bold text-gray-800 mb-3 border-b-2 border-blue-200 inline-block pb-1">Project Overview</h3>
-                            <p class="text-gray-700 leading-relaxed">
-                                I designed a handheld device to measure the distance to an object using an HC-SR04 ultrasonic sensor. The system provides immediate visual feedback via LEDs (Green, Yellow, Red) to indicate proximity zones:
-                            </p>
-                            <div class="flex gap-2 mt-3">
-                                <span class="text-sm bg-green-100 px-3 py-1 rounded-full text-green-800 font-medium">Green (>50cm)</span>
-                                <span class="text-sm bg-yellow-100 px-3 py-1 rounded-full text-yellow-800 font-medium">Yellow (20-50cm)</span>
-                                <span class="text-sm bg-red-100 px-3 py-1 rounded-full text-red-800 font-medium">Red (<20cm)</span>
-                            </div>
+                             <h3 class="text-xl font-bold text-gray-800 mb-4 border-l-4 border-blue-500 pl-3">Logic & Thresholds</h3>
+                             <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                                 <p class="mb-4 text-gray-700">The system calculates distance based on the echo time of the sound wave. The logic dictates:</p>
+                                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
+                                    <div class="p-3 bg-green-100 text-green-800 rounded-lg font-semibold border border-green-200">Safe: > 50cm</div>
+                                    <div class="p-3 bg-yellow-100 text-yellow-800 rounded-lg font-semibold border border-yellow-200">Warning: 20-50cm</div>
+                                    <div class="p-3 bg-red-100 text-red-800 rounded-lg font-semibold border border-red-200">Danger: < 20cm</div>
+                                 </div>
+                             </div>
                         </div>
 
                         <div>
-                            <h3 class="text-xl font-bold text-gray-800 mb-4">Components Used</h3>
-                            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                                <div class="bg-white border border-gray-200 p-3 rounded-lg shadow-sm flex flex-col items-center text-center">
-                                    <img src="https://placehold.co/100x100/e2e8f0/475569?text=Arduino" alt="Arduino Uno" class="w-10 h-10 mb-2 rounded">
-                                    <span class="text-xs font-bold text-gray-700">Arduino Uno</span>
+                            <h3 class="text-xl font-bold text-gray-800 mb-4 border-l-4 border-orange-500 pl-3">Challenges & Solutions</h3>
+                            <div class="space-y-4">
+                                <div class="bg-orange-50 p-4 rounded-lg border border-orange-100">
+                                    <h4 class="font-bold text-orange-800 text-sm uppercase tracking-wide mb-1">1. Signal Instability</h4>
+                                    <p class="text-gray-700 text-sm">
+                                        As seen in the video, the LEDs sometimes flicker between Green and Yellow. This is due to sensor noise around the 50cm threshold. 
+                                        <strong>Lesson:</strong> Future iterations require software debouncing or a moving average filter to smooth the data.
+                                    </p>
                                 </div>
-                                <div class="bg-white border border-gray-200 p-3 rounded-lg shadow-sm flex flex-col items-center text-center">
-                                    <img src="https://placehold.co/100x100/e2e8f0/475569?text=HC-SR04" alt="Sensor" class="w-10 h-10 mb-2 rounded">
-                                    <span class="text-xs font-bold text-gray-700">Ultrasonic Sensor</span>
-                                </div>
-                                <div class="bg-white border border-gray-200 p-3 rounded-lg shadow-sm flex flex-col items-center text-center">
-                                    <img src="https://placehold.co/100x100/e2e8f0/475569?text=HC-05" alt="Bluetooth" class="w-10 h-10 mb-2 rounded">
-                                    <span class="text-xs font-bold text-gray-700">Bluetooth Module</span>
-                                </div>
-                                <div class="bg-white border border-gray-200 p-3 rounded-lg shadow-sm flex flex-col items-center text-center">
-                                    <img src="https://placehold.co/100x100/e2e8f0/475569?text=LEDs" alt="LEDs" class="w-10 h-10 mb-2 rounded">
-                                    <span class="text-xs font-bold text-gray-700">LEDs & Resistors</span>
-                                </div>
-                                <div class="bg-white border border-gray-200 p-3 rounded-lg shadow-sm flex flex-col items-center text-center">
-                                    <img src="https://placehold.co/100x100/e2e8f0/475569?text=Wiring" alt="Breadboard" class="w-10 h-10 mb-2 rounded">
-                                    <span class="text-xs font-bold text-gray-700">Breadboard</span>
+                                <div class="bg-orange-50 p-4 rounded-lg border border-orange-100">
+                                    <h4 class="font-bold text-orange-800 text-sm uppercase tracking-wide mb-1">2. Bluetooth Connectivity</h4>
+                                    <p class="text-gray-700 text-sm">
+                                        Connecting the HC-05 module was difficult due to a baud rate mismatch. The module defaults to 38400 in command mode, but my code was using 9600. Debugging required re-configuring the module via AT commands and ensuring the RX/TX pins were not swapped.
+                                    </p>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="space-y-4">
-                            <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded-r-lg">
-                                <h4 class="font-bold text-green-800 mb-1">What Went Well (Successes)</h4>
-                                <p class="text-sm text-gray-700">
-                                    The core logic works efficiently. The C++ code successfully calculates distance from echo time, and the inclusion of the HC-05 Bluetooth module allows for wireless data monitoring, extending the project beyond basic sensing.
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-3 border-l-4 border-purple-500 pl-3">Future Work</h3>
+                                <p class="text-gray-700 text-sm">
+                                    I plan to build a <strong>Python-based Dashboard</strong> using the Bluetooth data to visualize distance trends in real-time, upgrading this from a simple alert device to an IoT monitor.
                                 </p>
                             </div>
-                            
-                            <div class="bg-orange-50 border-l-4 border-orange-500 p-4 rounded-r-lg">
-                                <h4 class="font-bold text-orange-800 mb-1">Challenges Faced</h4>
-                                <p class="text-sm text-gray-700">
-                                    <strong>Sensor Noise & Signal Flickering:</strong> As seen in the demo video (approx. 0:14), the LEDs occasionally flicker between Green and Yellow. This indicates that the sensor readings are jumping around the 50cm threshold due to signal noise. This taught me the importance of hardware debouncing and the need for software filtering.
-                                </p>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-3 border-l-4 border-blue-500 pl-3">Skills Gained</h3>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-gray-200 text-gray-700 text-xs font-bold px-2 py-1 rounded">Circuit Prototyping</span>
+                                    <span class="bg-gray-200 text-gray-700 text-xs font-bold px-2 py-1 rounded">Embedded C++</span>
+                                    <span class="bg-gray-200 text-gray-700 text-xs font-bold px-2 py-1 rounded">Sensor Integration</span>
+                                    <span class="bg-gray-200 text-gray-700 text-xs font-bold px-2 py-1 rounded">UART Communication</span>
+                                </div>
                             </div>
-                        </div>
-
-                        <div>
-                            <h3 class="text-xl font-bold text-gray-800 mb-2">Outcome & Future Work</h3>
-                            <p class="text-gray-700 leading-relaxed text-sm">
-                                While the prototype is functional, future iterations will address the flickering by implementing a <strong>Moving Average Filter</strong> in the C++ code to smooth out the sensor data.
-                            </p>
-                            <p class="text-gray-700 leading-relaxed text-sm mt-2">
-                                Additionally, I plan to build a <strong>Python-based Dashboard</strong> using the Bluetooth data to visualize distance trends in real-time, moving the project from a simple hardware alert system to a full IoT monitoring solution.
-                            </p>
                         </div>
 
                     </div>
@@ -417,4 +449,3 @@
 
 </body>
 </html>
-
