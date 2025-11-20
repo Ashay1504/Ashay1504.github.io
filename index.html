@@ -257,6 +257,7 @@
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Ultrasonic Distance Sensor with Visual Feedback</h2>
                 </div>
 
+                <!-- 1. The Problem -->
                 <div class="mb-16">
                     <div class="flex items-center gap-4 mb-6">
                         <div class="bg-blue-600 text-white font-bold rounded-full w-10 h-10 flex items-center justify-center shrink-0">1</div>
@@ -269,12 +270,14 @@
                     </div>
                 </div>
 
+                <!-- 2. The Process -->
                 <div class="mb-16">
                     <div class="flex items-center gap-4 mb-6">
                         <div class="bg-blue-600 text-white font-bold rounded-full w-10 h-10 flex items-center justify-center shrink-0">2</div>
                         <h3 class="text-2xl font-bold text-gray-900">The Process</h3>
                     </div>
                     
+                    <!-- Components Row -->
                     <div class="mb-8">
                         <h4 class="text-xl font-semibold text-gray-800 mb-4 pl-14">Hardware Selection</h4>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pl-14">
@@ -308,6 +311,7 @@
                         </div>
                     </div>
 
+                    <!-- Build and Logic Row -->
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 pl-0 md:pl-14">
                         <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
                             <div class="p-3 border-b border-gray-100 bg-gray-50">
@@ -338,12 +342,14 @@
                     </div>
                 </div>
 
+                <!-- 3. The Outcome & Reflection -->
                 <div class="mb-16">
                     <div class="flex items-center gap-4 mb-6">
                         <div class="bg-blue-600 text-white font-bold rounded-full w-10 h-10 flex items-center justify-center shrink-0">3</div>
                         <h3 class="text-2xl font-bold text-gray-900">The Outcome & Reflection</h3>
                     </div>
 
+                    <!-- Video and Serial Data -->
                     <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 pl-0 md:pl-14 mb-10">
                         <div class="lg:col-span-3 bg-black rounded-xl shadow-lg overflow-hidden h-80 border border-gray-200">
                             <video controls class="w-full h-full object-contain">
@@ -359,16 +365,16 @@
                         </div>
                     </div>
 
+                    <!-- Challenges and Future Work -->
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pl-0 md:pl-14">
                         <div class="bg-orange-50 p-6 rounded-xl border border-orange-100">
                             <h4 class="text-lg font-bold text-orange-900 mb-4 flex items-center">
                                 <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
-                                Challenges & Solutions
+                                Challenges faced
                             </h4>
                             <ul class="space-y-4 text-gray-800">
                                 <li>
-                                    <strong>Signal Instability:</strong> As seen in the video, the LEDs sometimes flicker between Green and Yellow. This is due to sensor noise around the threshold. 
-                                    <br><em class="text-sm text-gray-600">Solution: Future iterations require a moving average filter in C++.</em>
+                                    <strong>Signal Instability:</strong> As seen in the video, the LEDs sometimes flicker between Green and Yellow. This is due to sensor noise around the threshold.
                                 </li>
                                 <li>
                                     <strong>Bluetooth Connectivity:</strong> Connecting the HC-05 module was difficult due to a baud rate mismatch (38400 vs 9600). 
@@ -380,10 +386,13 @@
                         <div class="bg-purple-50 p-6 rounded-xl border border-purple-100">
                             <h4 class="text-lg font-bold text-purple-900 mb-4 flex items-center">
                                 <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                                Future Work
+                                Future Work & Solutions
                             </h4>
                             <p class="text-gray-800 mb-4">
-                                While the prototype is functional, I plan to upgrade this from a simple alert device to a full IoT monitor by building a <strong>Python-based Dashboard</strong> that visualizes the Bluetooth distance data in real-time.
+                                To address the signal instability, future iterations will implement a <strong>Moving Average Filter</strong> in the C++ code to smooth out the sensor data and eliminate flickering.
+                            </p>
+                            <p class="text-gray-800 mb-4">
+                                I also plan to upgrade this from a simple alert device to a full IoT monitor by building a <strong>Python-based Dashboard</strong> that visualizes the Bluetooth distance data in real-time.
                             </p>
                             
                             <h5 class="font-bold text-sm text-purple-900 mb-2 mt-6">Skills Gained:</h5>
