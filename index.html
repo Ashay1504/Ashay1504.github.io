@@ -123,7 +123,6 @@
                 <div class="mb-20">
                     <h3 class="text-2xl font-bold text-center text-gray-900 mb-10">Strategic Timeline</h3>
                     <div class="relative border-l-4 border-blue-200 ml-4 md:ml-1/2 space-y-12">
-                        
                         <div class="relative pl-8 md:pl-0">
                             <div class="absolute -left-3.5 top-1 w-6 h-6 bg-blue-600 rounded-full border-4 border-white shadow"></div>
                             <div class="md:w-1/2 md:ml-auto md:pl-12">
@@ -132,7 +131,6 @@
                                 <p class="text-gray-600 mt-2">Established a strong engineering GPA and joined the Georgia Tech Cricket Club to build a community outside of academics.</p>
                             </div>
                         </div>
-
                         <div class="relative pl-8 md:pl-0">
                             <div class="absolute -left-3.5 top-1 w-6 h-6 bg-blue-600 rounded-full border-4 border-white shadow"></div>
                             <div class="md:w-1/2 md:mr-auto md:pr-12 md:text-right">
@@ -141,7 +139,6 @@
                                 <p class="text-gray-600 mt-2">Took on leadership in Cricket Club and secured a summer internship/research position to explore robotics and semiconductors.</p>
                             </div>
                         </div>
-
                         <div class="relative pl-8 md:pl-0">
                             <div class="absolute -left-3.5 top-1 w-6 h-6 bg-blue-600 rounded-full border-4 border-white shadow"></div>
                             <div class="md:w-1/2 md:ml-auto md:pl-12">
@@ -150,7 +147,6 @@
                                 <p class="text-gray-600 mt-2">Excelling in thread courses and targeting specialized internships in RTL, ASIC, or Physical Design for Summer 2026.</p>
                             </div>
                         </div>
-
                         <div class="relative pl-8 md:pl-0">
                             <div class="absolute -left-3.5 top-1 w-6 h-6 bg-blue-600 rounded-full border-4 border-white shadow"></div>
                             <div class="md:w-1/2 md:mr-auto md:pr-12 md:text-right">
@@ -169,7 +165,6 @@
                             Supports my interest in RTL design and computer architecture, providing the fundamental knowledge required for CPU/GPU development.
                         </p>
                     </div>
-
                     <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-green-500">
                         <h4 class="text-xl font-bold text-gray-900 mb-2">Signal & Information Processing</h4>
                         <p class="text-gray-600 mb-4">
@@ -177,7 +172,6 @@
                         </p>
                     </div>
                 </div>
-
             </div>
         </section>
         
@@ -268,72 +262,90 @@
 
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-16">
                     <div class="space-y-6">
-                        <div class="rounded-xl overflow-hidden shadow-lg border border-gray-200">
-                            <img src="IMG-20251119-WA0004.jpg" alt="Arduino Breadboard Setup" class="w-full h-auto object-cover">
+                        <div class="rounded-xl overflow-hidden shadow-lg border border-gray-200 bg-white p-2">
+                             <p class="text-xs text-gray-500 font-semibold mb-1 text-center">Final Circuit Build</p>
+                            <img src="IMG-20251119-WA0004.jpg" alt="Arduino Breadboard Setup" class="w-full h-auto object-cover rounded-lg">
                         </div>
+                        
                         <div class="grid grid-cols-2 gap-4">
-                            <div class="rounded-lg overflow-hidden shadow border border-gray-200">
-                                <img src="IMG-20251119-WA0003.jpg" alt="Serial Monitor Output" class="w-full h-full object-cover">
+                            <div class="rounded-lg overflow-hidden shadow border border-gray-200 bg-white p-1">
+                                <p class="text-xs text-gray-500 font-semibold mb-1 text-center">Serial Monitor</p>
+                                <img src="IMG-20251119-WA0003.jpg" alt="Serial Monitor Output" class="w-full h-full object-cover rounded">
                             </div>
                             <div class="rounded-lg overflow-hidden shadow border border-gray-200 bg-black relative">
                                 <video controls class="w-full h-full object-cover">
-                                    <source src="final_video.mp4" type="video/mp4">
+                                    <source src="VID-20251119-WA0002.mp4" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
                             </div>
                         </div>
+                        <p class="text-sm text-gray-500 italic text-center mt-2">Watch the video to see the sensor logic in real-time.</p>
                     </div>
 
-                    <div class="space-y-10">
+                    <div class="space-y-8">
                         
                         <div>
-                            <h3 class="text-2xl font-bold text-gray-800 mb-3 border-b-2 border-blue-200 inline-block pb-1">The Problem & Idea</h3>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-3 border-b-2 border-blue-200 inline-block pb-1">Project Overview</h3>
                             <p class="text-gray-700 leading-relaxed">
-                                I designed a handheld device to measure the distance to an object using an HC-SR04 ultrasonic sensor. The system provides immediate visual feedback via LEDs (Green, Yellow, Red) to indicate proximity zones, alerting the user if an object is far away, approaching, or too close.
+                                I designed a handheld device to measure the distance to an object using an HC-SR04 ultrasonic sensor. The system provides immediate visual feedback via LEDs (Green, Yellow, Red) to indicate proximity zones:
                             </p>
-                        </div>
-
-                        <div>
-                            <h3 class="text-2xl font-bold text-gray-800 mb-3 border-b-2 border-blue-200 inline-block pb-1">The Process</h3>
-                            <ul class="space-y-4 text-gray-700">
-                                <li class="flex gap-3">
-                                    <span class="font-bold text-blue-600">1.</span>
-                                    <span><strong>Prototyping:</strong> Borrowed components (Arduino Uno, HC-SR04, LEDs) from ECE Instructional Labs and wired the initial circuit on a breadboard.</span>
-                                </li>
-                                <li class="flex gap-3">
-                                    <span class="font-bold text-blue-600">2.</span>
-                                    <span><strong>Coding Logic:</strong> Wrote C++ code to calculate distance based on sensor echo time. Implemented threshold logic: <br>
-                                    <span class="text-sm bg-green-100 px-2 py-0.5 rounded text-green-800">Green (>50cm)</span>
-                                    <span class="text-sm bg-yellow-100 px-2 py-0.5 rounded text-yellow-800">Yellow (20-50cm)</span>
-                                    <span class="text-sm bg-red-100 px-2 py-0.5 rounded text-red-800">Red (<20cm)</span>
-                                    </span>
-                                </li>
-                                <li class="flex gap-3">
-                                    <span class="font-bold text-blue-600">3.</span>
-                                    <span><strong>Expansion:</strong> Integrated an HC-05 Bluetooth module to enable wireless data transmission and remote monitoring capabilities.</span>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div>
-                            <h3 class="text-2xl font-bold text-gray-800 mb-3 border-b-2 border-blue-200 inline-block pb-1">Outcome & Reflection</h3>
-                            <p class="text-gray-700 leading-relaxed mb-4">
-                                <strong>Successes:</strong> The device accurately measures distance in real-time, and the LED logic triggers instantly based on the programmed thresholds. The Bluetooth integration was a significant addition that extended the project's complexity.
-                            </p>
-                            <p class="text-gray-700 leading-relaxed">
-                                <strong>Challenges:</strong> Calibrating the sensor to avoid noise and ensuring the wiring remained stable on the breadboard were initial hurdles. Overcoming these improved my debugging skills significantly.
-                            </p>
-                        </div>
-
-                        <div>
-                            <h4 class="text-lg font-semibold text-gray-900 mb-3">ECE Skills Gained:</h4>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="bg-white border border-gray-300 text-gray-700 text-sm font-medium px-3 py-1 rounded-full shadow-sm">Circuit Prototyping</span>
-                                <span class="bg-white border border-gray-300 text-gray-700 text-sm font-medium px-3 py-1 rounded-full shadow-sm">Embedded Systems Design</span>
-                                <span class="bg-white border border-gray-300 text-gray-700 text-sm font-medium px-3 py-1 rounded-full shadow-sm">C/C++ Programming</span>
-                                <span class="bg-white border border-gray-300 text-gray-700 text-sm font-medium px-3 py-1 rounded-full shadow-sm">Sensor Interfacing</span>
-                                <span class="bg-white border border-gray-300 text-gray-700 text-sm font-medium px-3 py-1 rounded-full shadow-sm">UART/Bluetooth Comm</span>
+                            <div class="flex gap-2 mt-3">
+                                <span class="text-sm bg-green-100 px-3 py-1 rounded-full text-green-800 font-medium">Green (>50cm)</span>
+                                <span class="text-sm bg-yellow-100 px-3 py-1 rounded-full text-yellow-800 font-medium">Yellow (20-50cm)</span>
+                                <span class="text-sm bg-red-100 px-3 py-1 rounded-full text-red-800 font-medium">Red (<20cm)</span>
                             </div>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-4">Components Used</h3>
+                            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                                <div class="bg-white border border-gray-200 p-3 rounded-lg shadow-sm flex flex-col items-center text-center">
+                                    <img src="https://placehold.co/100x100/e2e8f0/475569?text=Arduino" alt="Arduino Uno" class="w-10 h-10 mb-2 rounded">
+                                    <span class="text-xs font-bold text-gray-700">Arduino Uno</span>
+                                </div>
+                                <div class="bg-white border border-gray-200 p-3 rounded-lg shadow-sm flex flex-col items-center text-center">
+                                    <img src="https://placehold.co/100x100/e2e8f0/475569?text=HC-SR04" alt="Sensor" class="w-10 h-10 mb-2 rounded">
+                                    <span class="text-xs font-bold text-gray-700">Ultrasonic Sensor</span>
+                                </div>
+                                <div class="bg-white border border-gray-200 p-3 rounded-lg shadow-sm flex flex-col items-center text-center">
+                                    <img src="https://placehold.co/100x100/e2e8f0/475569?text=HC-05" alt="Bluetooth" class="w-10 h-10 mb-2 rounded">
+                                    <span class="text-xs font-bold text-gray-700">Bluetooth Module</span>
+                                </div>
+                                <div class="bg-white border border-gray-200 p-3 rounded-lg shadow-sm flex flex-col items-center text-center">
+                                    <img src="https://placehold.co/100x100/e2e8f0/475569?text=LEDs" alt="LEDs" class="w-10 h-10 mb-2 rounded">
+                                    <span class="text-xs font-bold text-gray-700">LEDs & Resistors</span>
+                                </div>
+                                <div class="bg-white border border-gray-200 p-3 rounded-lg shadow-sm flex flex-col items-center text-center">
+                                    <img src="https://placehold.co/100x100/e2e8f0/475569?text=Wiring" alt="Breadboard" class="w-10 h-10 mb-2 rounded">
+                                    <span class="text-xs font-bold text-gray-700">Breadboard</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="space-y-4">
+                            <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded-r-lg">
+                                <h4 class="font-bold text-green-800 mb-1">What Went Well (Successes)</h4>
+                                <p class="text-sm text-gray-700">
+                                    The core logic works efficiently. The C++ code successfully calculates distance from echo time, and the inclusion of the HC-05 Bluetooth module allows for wireless data monitoring, extending the project beyond basic sensing.
+                                </p>
+                            </div>
+                            
+                            <div class="bg-orange-50 border-l-4 border-orange-500 p-4 rounded-r-lg">
+                                <h4 class="font-bold text-orange-800 mb-1">Challenges Faced</h4>
+                                <p class="text-sm text-gray-700">
+                                    <strong>Sensor Noise & Signal Flickering:</strong> As seen in the demo video (approx. 0:14), the LEDs occasionally flicker between Green and Yellow. This indicates that the sensor readings are jumping around the 50cm threshold due to signal noise. This taught me the importance of hardware debouncing and the need for software filtering.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Outcome & Future Work</h3>
+                            <p class="text-gray-700 leading-relaxed text-sm">
+                                While the prototype is functional, future iterations will address the flickering by implementing a <strong>Moving Average Filter</strong> in the C++ code to smooth out the sensor data.
+                            </p>
+                            <p class="text-gray-700 leading-relaxed text-sm mt-2">
+                                Additionally, I plan to build a <strong>Python-based Dashboard</strong> using the Bluetooth data to visualize distance trends in real-time, moving the project from a simple hardware alert system to a full IoT monitoring solution.
+                            </p>
                         </div>
 
                     </div>
@@ -405,4 +417,3 @@
 
 </body>
 </html>
-
